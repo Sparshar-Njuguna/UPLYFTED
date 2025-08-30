@@ -1,0 +1,6 @@
+
+[
+  { "id": 1, "title": "Low-Cost Counseling Directory", "tag": "Therapy", "description": "Find vetted, affordable therapists by region." },
+  { "id": 2, "title": "Crisis & Safety Planning", "tag": "Safety", "description": "Confidential steps to build a safety plan and get help fast." },
+  { "id": 3, "title": "Guided Breathwork (10 min)", "tag": "Self-care", "description": "A calming audio session for stressful days." }
+]

@@ -1,0 +1,6 @@
+
+[
+  { "id": 1, "title": "Intro to Digital Marketing", "level": "Beginner", "description": "Learn social media, SEO basics, and content strategy for small businesses." },
+  { "id": 2, "title": "Freelance Basics (Remote Work)", "level": "Beginner", "description": "Set up profiles, pricing, and client communication for remote gigs." },
+  { "id": 3, "title": "Front-End Foundations", "level": "Intermediate", "description": "HTML, CSS, and JavaScript essentials to build your first pages." }
+]

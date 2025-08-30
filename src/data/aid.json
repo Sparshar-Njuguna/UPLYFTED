@@ -1,0 +1,6 @@
+
+[
+  { "id": 1, "title": "Emergency Micro-Grant", "type": "Grant", "description": "Small, rapid support for urgent needs (rent, food, medicine)." },
+  { "id": 2, "title": "Uplyfted Microloans", "type": "Loan", "description": "Zero-interest microloans for course tuition or equipment." },
+  { "id": 3, "title": "Childcare Stipend", "type": "Grant", "description": "Short-term childcare support while you take training." }
+]

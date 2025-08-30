@@ -30,7 +30,6 @@ const featuredCards = [
 ];
 
 export default function Home() {
-  // Scroll to top when the page loads
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -96,39 +95,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="about">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="section-title"
-        >
-          About <span className="accent-text">Uplyfted</span>
-        </motion.h2>
-
-        <div className="about-content">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="section-text"
-          >
-            Uplyfted is a supportive hub designed to provide women with resources,
-            mentorship, and a community that uplifts and empowers. Whether you’re
-            focusing on your career, finances, health, or personal growth – we’re
-            here to walk with you every step of the way.
-          </motion.p>
-
-          {/* Heart Animation integrated here */}
-          <div className="about-heart">
-            <HeartAnimation />
-          </div>
-        </div>
-      </section>
-
       {/* Featured Cards Section */}
       <section className="featured">
         <motion.h2
@@ -156,6 +122,67 @@ export default function Home() {
               <p className="card-text">{card.description}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="about">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="section-title"
+        >
+          About <span className="accent-text">Uplyfted</span>
+        </motion.h2>
+
+        <div className="about-content">
+          {/* Heart animation on the left */}
+          <div className="about-heart">
+            <svg className="curved-text" viewBox="0 0 300 300">
+              <path
+                id="topCurve"
+                d="M50,150 A100,100 0 0,1 250,150"
+                fill="transparent"
+              />
+              <path
+                id="bottomCurve"
+                d="M50,150 A100,100 0 0,0 250,150"
+                fill="transparent"
+              />
+              <text>
+                <textPath href="#topCurve" startOffset="50%" textAnchor="middle">
+                  CLICK ME FOR A SMILE
+                </textPath>
+              </text>
+              <text>
+                <textPath
+                  href="#bottomCurve"
+                  startOffset="50%"
+                  textAnchor="middle"
+                >
+                  YOU DESERVE IT QUEEN
+                </textPath>
+              </text>
+            </svg>
+            <HeartAnimation />
+          </div>
+
+          {/* About text beside heart */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="section-text"
+          >
+            Uplyfted is a supportive hub designed to provide women and girls with resources,
+            mentorship, and a community that uplifts and empowers. Whether you’re
+            focusing on your career, finances, health, or personal growth – we’re
+            here to walk with you every step of the way. It does't matter where you
+            are in your journey, you don't have to do it alone.💞
+          </motion.p>
         </div>
       </section>
     </div>

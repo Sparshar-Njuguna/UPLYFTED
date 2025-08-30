@@ -20,7 +20,7 @@ const featuredCards = [
   {
     icon: <HeartPulse className="icon" />,
     title: "Health & Wellness",
-    description: "Prioritize your well-being with curated health and lifestyle content.",
+    description: "Prioritize your well-being with curated information and support.",
   },
   {
     icon: <Users className="icon" />,

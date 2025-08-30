@@ -1,13 +1,15 @@
-/* Career.css */
-
 /* ------------------ Career Page Layout ------------------ */
 .career-page {
   padding: 2rem;
   color: #2d2d2d;
+  background-color: #E6E6FA;
+  /* give Career its own bg if you want:
+     background: #f9fafb; 
+  */
 }
 
 /* ------------------ Hero Section ------------------ */
-.career-hero {
+.career-page .career-hero {
   text-align: center;
   padding: 4rem 2rem;
   background: linear-gradient(
@@ -20,13 +22,13 @@
   box-shadow: 0 8px 24px rgba(91, 33, 182, 0.15);
 }
 
-.career-title {
+.career-page .career-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.career-subtitle {
+.career-page .career-subtitle {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
@@ -34,25 +36,25 @@
 }
 
 /* ------------------ Section Title ------------------ */
-.section-title {
+.career-page .section-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 /* ------------------ Courses Section ------------------ */
-.career-courses {
+.career-page .career-courses {
   padding: 2rem 0 4rem 0;
 }
 
 /* ------------------ Cards ------------------ */
-.cards-container {
+.career-page .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
-.card {
+.career-page .card {
   background: #fff;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -61,24 +63,24 @@
   text-align: center;
 }
 
-.card:hover {
+.career-page .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
 }
 
-.card-title {
+.career-page .card-title {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-.card-text {
+.career-page .card-text {
   font-size: 1rem;
   color: #4b5563;
   margin-bottom: 1rem;
 }
 
-.card-link {
+.career-page .card-link {
   display: inline-block;
   font-weight: 500;
   color: #5b21b6;
@@ -86,11 +88,11 @@
   transition: color 0.3s ease;
 }
 
-.card-link:hover {
+.career-page .card-link:hover {
   color: #7c3aed;
 }
 
-/* Accent text (reuse across pages) */
-.career-page.accent-text {
+/* Accent text (scoped correctly) */
+.career-page .accent-text {
   color: #5b21b6;
 }

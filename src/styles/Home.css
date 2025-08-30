@@ -1,5 +1,13 @@
 
+/* Global reset that’s safe across pages */
 body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d2d2d;
+}
+
+/* Page-specific background now lives on .home (not body) */
+.home {
   background: linear-gradient(
     to bottom,
     #5b21b6,   /* deep violet */
@@ -7,13 +15,11 @@ body {
     #7c3aed,   /* vibrant mid */
     #e9d5ff    /* pastel lilac */
   );
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2d2d2d;
+  min-height: 100vh;
 }
 
 /* ------------------ Hero Section ------------------ */
-.hero {
+.home .hero {
   position: relative;
   min-height: 80vh;
   display: flex;
@@ -26,7 +32,7 @@ body {
   overflow: hidden;
 }
 
-.hero::before {
+.home .hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -37,7 +43,7 @@ body {
   z-index: 0;
 }
 
-.hero-content {
+.home .hero-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,32 +53,32 @@ body {
   z-index: 2;
 }
 
-.hero-text {
+.home .hero-text {
   flex: 1;
   text-align: left;
   animation: fadeInUp 1.5s ease both;
 }
 
-.hero-title {
+.home .hero-title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
 }
 
-.hero-subtitle {
+.home .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   color: #f5f3ff;
   line-height: 1.6;
 }
 
-.accent-text {
-  color: #ff2d78; /* bold fuschia accent */
+.home .accent-text {
+  color: #ff2d78; /* bold fuschia accent, scoped to Home only */
 }
 
 /* CTA Button */
-.hero-button {
+.home .hero-button {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: #ff2d78;
@@ -83,12 +89,13 @@ body {
   transition: all 0.3s ease;
 }
 
-.hero-button:hover {
+.home .hero-button:hover {
   background-color: #ff4d94;
   transform: scale(1.05);
 }
 
-.hero-image {
+/* Hero image */
+.home .hero-image {
   flex: 1;
   max-width: 450px;
   width: 100%;
@@ -99,14 +106,14 @@ body {
 }
 
 /* Floating Shapes */
-.floating-shape {
+.home .floating-shape {
   position: absolute;
   border-radius: 50%;
   opacity: 0.25;
   z-index: 1;
 }
 
-.shape1 {
+.home .shape1 {
   width: 200px;
   height: 200px;
   background-color: #d8b4fe;
@@ -115,7 +122,7 @@ body {
   filter: blur(80px);
 }
 
-.shape2 {
+.home .shape2 {
   width: 150px;
   height: 150px;
   background-color: #ff80c8;
@@ -125,12 +132,12 @@ body {
 }
 
 /* ------------------ Featured Cards ------------------ */
-.featured {
+.home .featured {
   padding: 6rem 2rem;
   text-align: center;
 }
 
-.cards-container {
+.home .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
@@ -138,7 +145,7 @@ body {
   margin: 3rem auto 0 auto;
 }
 
-.card {
+.home .card {
   background-color: #ffffffcc;
   border-radius: 2rem;
   padding: 2rem 1.5rem;
@@ -147,12 +154,13 @@ body {
   cursor: pointer;
 }
 
-.card:hover {
+.home .card:hover {
   transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.icon {
+/* Icons */
+.home .icon {
   width: 3rem;
   height: 3rem;
   color: #ff2d78;
@@ -160,21 +168,21 @@ body {
 }
 
 /* ------------------ About Section ------------------ */
-.about {
+.home .about {
   max-width: 1200px;
   margin: 0 auto;
   padding: 6rem 2rem;
   text-align: center;
 }
 
-.about-content {
+.home .about-content {
   display: flex;
   align-items: center;
   gap: 3rem;
   margin-top: 2rem;
 }
 
-.section-text {
+.home .section-text {
   flex: 1;
   font-size: 1.1rem;
   line-height: 1.7;
@@ -182,14 +190,14 @@ body {
 }
 
 /* Heart Animation + Curved Text */
-.about-heart {
+.home .about-heart {
   flex: 1;
   position: relative;
   max-width: 350px;
   margin: 0 auto;
 }
 
-.curved-text {
+.home .curved-text {
   position: absolute;
   top: -40px;
   left: 0;
@@ -198,7 +206,7 @@ body {
   pointer-events: none;
 }
 
-.curved-text text {
+.home .curved-text text {
   font-size: 1rem;
   font-weight: bold;
   fill: #ff2d78;
@@ -219,17 +227,18 @@ body {
 
 /* ------------------ Responsive ------------------ */
 @media (max-width: 1024px) {
-  .hero-content { flex-direction: column; text-align: center; gap: 2rem; }
-  .hero-text { text-align: center; }
-  .hero-image { max-width: 300px; }
-  .about-content { flex-direction: column; text-align: center; }
-  .section-text { text-align: center; }
+  .home .hero-content { flex-direction: column; text-align: center; gap: 2rem; }
+  .home .hero-text { text-align: center; }
+  .home .hero-image { max-width: 300px; }
+  .home .about-content { flex-direction: column; text-align: center; }
+  .home .section-text { text-align: center; }
 }
 
 @media (max-width: 768px) {
-  .hero-title { font-size: 2.25rem; }
-  .hero-subtitle { font-size: 1rem; }
-  .section-title { font-size: 2rem; }
-  .card { padding: 1.5rem 1rem; }
+  .home .hero-title { font-size: 2.25rem; }
+  .home .hero-subtitle { font-size: 1rem; }
+  .home .section-title { font-size: 2rem; }
+  .home .card { padding: 1.5rem 1rem; }
 }
+
 

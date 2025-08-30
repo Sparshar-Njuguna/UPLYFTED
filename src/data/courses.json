@@ -1,43 +1,43 @@
 
 [
   {
-    "title": "Resume Building",
-    "description": "Craft a compelling resume that highlights your strengths and wins interviews.",
-    "level": "Beginner",
-    "category": "Career Development",
-    "link": "/courses/resume-building"
-  },
-  {
-    "title": "Interview Preparation",
-    "description": "Boost your confidence and learn how to tackle even the toughest interview questions.",
+    "title": "Digital Marketing",
+    "description": "Master SEO, social media, and online campaigns to grow any business in the digital age.",
     "level": "Intermediate",
-    "category": "Career Development",
-    "link": "/courses/interview-prep"
+    "category": "Marketing",
+    "link": "/courses/digital-marketing"
   },
   {
-    "title": "Networking Essentials",
-    "description": "Build meaningful professional connections that open doors to new opportunities.",
-    "level": "All Levels",
-    "category": "Soft Skills",
-    "link": "/courses/networking"
+    "title": "Freelance Fundamentals",
+    "description": "Learn how to start, manage, and scale your freelancing career with confidence.",
+    "level": "Beginner",
+    "category": "Business",
+    "link": "/courses/freelance-fundamentals"
+  },
+  {
+    "title": "Frontend Fundamentals",
+    "description": "Build strong foundations in HTML, CSS, and JavaScript to kickstart your web dev journey.",
+    "level": "Beginner",
+    "category": "Web Development",
+    "link": "/courses/frontend-fundamentals"
   },
   {
     "title": "Virtual Assistant Training",
-    "description": "Master the skills needed to become a successful VA and support businesses worldwide.",
+    "description": "Develop essential skills to become a successful VA and support clients globally.",
     "level": "Beginner",
     "category": "Business",
     "link": "/courses/virtual-assistant"
   },
   {
     "title": "Project Management Foundations",
-    "description": "Learn the principles of planning, executing, and managing projects effectively.",
+    "description": "Learn the principles and tools to plan, organize, and manage projects effectively.",
     "level": "Intermediate",
-    "category": "Business",
+    "category": "Management",
     "link": "/courses/project-management"
   },
   {
     "title": "Personal Finance 101",
-    "description": "Understand budgeting, saving, and investing to build long-term financial security.",
+    "description": "Understand budgeting, saving, and investing to secure your financial future.",
     "level": "Beginner",
     "category": "Finance",
     "link": "/courses/personal-finance"

@@ -1,0 +1,96 @@
+/* Career.css */
+
+/* ------------------ Career Page Layout ------------------ */
+.career-page {
+  padding: 2rem;
+  color: #2d2d2d;
+}
+
+/* ------------------ Hero Section ------------------ */
+.career-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #ede9fe, /* soft lavender */
+    #ddd6fe   /* pastel violet */
+  );
+  border-radius: 1.5rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.15);
+}
+
+.career-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.career-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #4b5563;
+}
+
+/* ------------------ Section Title ------------------ */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ------------------ Courses Section ------------------ */
+.career-courses {
+  padding: 2rem 0 4rem 0;
+}
+
+/* ------------------ Cards ------------------ */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  display: inline-block;
+  font-weight: 500;
+  color: #5b21b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #7c3aed;
+}
+
+/* Accent text (reuse across pages) */
+.accent-text {
+  color: #5b21b6;
+}

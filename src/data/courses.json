@@ -1,6 +1,45 @@
 
 [
-  { "id": 1, "title": "Intro to Digital Marketing", "level": "Beginner", "description": "Learn social media, SEO basics, and content strategy for small businesses." },
-  { "id": 2, "title": "Freelance Basics (Remote Work)", "level": "Beginner", "description": "Set up profiles, pricing, and client communication for remote gigs." },
-  { "id": 3, "title": "Front-End Foundations", "level": "Intermediate", "description": "HTML, CSS, and JavaScript essentials to build your first pages." }
+  {
+    "title": "Resume Building",
+    "description": "Craft a compelling resume that highlights your strengths and wins interviews.",
+    "level": "Beginner",
+    "category": "Career Development",
+    "link": "/courses/resume-building"
+  },
+  {
+    "title": "Interview Preparation",
+    "description": "Boost your confidence and learn how to tackle even the toughest interview questions.",
+    "level": "Intermediate",
+    "category": "Career Development",
+    "link": "/courses/interview-prep"
+  },
+  {
+    "title": "Networking Essentials",
+    "description": "Build meaningful professional connections that open doors to new opportunities.",
+    "level": "All Levels",
+    "category": "Soft Skills",
+    "link": "/courses/networking"
+  },
+  {
+    "title": "Virtual Assistant Training",
+    "description": "Master the skills needed to become a successful VA and support businesses worldwide.",
+    "level": "Beginner",
+    "category": "Business",
+    "link": "/courses/virtual-assistant"
+  },
+  {
+    "title": "Project Management Foundations",
+    "description": "Learn the principles of planning, executing, and managing projects effectively.",
+    "level": "Intermediate",
+    "category": "Business",
+    "link": "/courses/project-management"
+  },
+  {
+    "title": "Personal Finance 101",
+    "description": "Understand budgeting, saving, and investing to build long-term financial security.",
+    "level": "Beginner",
+    "category": "Finance",
+    "link": "/courses/personal-finance"
+  }
 ]

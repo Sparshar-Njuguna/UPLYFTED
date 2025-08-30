@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import courses from "../data/courses.json";
@@ -28,8 +27,9 @@ export default function Career() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="career-subtitle"
         >
-          Explore resources, mentorship, and courses designed to help you
-          thrive in your career journey.
+          Explore skill-building programs designed to prepare you for today’s
+          most in-demand careers. Learn at your pace, and take the next step
+          forward.
         </motion.p>
       </section>
 
@@ -57,7 +57,15 @@ export default function Career() {
             >
               <h3 className="card-title">{course.title}</h3>
               <p className="card-text">{course.description}</p>
-              <a href={course.link} className="card-link" target="_blank" rel="noopener noreferrer">
+              <p className="card-meta">
+                <span>{course.level}</span> · <span>{course.category}</span>
+              </p>
+              <a
+                href={course.link}
+                className="card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Learn More →
               </a>
             </motion.div>

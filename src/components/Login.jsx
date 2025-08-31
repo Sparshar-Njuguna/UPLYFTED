@@ -2,60 +2,61 @@ import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log("Login with:", email, password);
-  };
-
   return (
-    <form className="auth-form" onSubmit={handleLogin}>
-      <label>
-        Email
+    <form className="flex flex-col gap-4">
+      {/* Email */}
+      <div className="flex flex-col gap-1">
+        <label htmlFor="email" className="text-sm font-medium text-gray-700">
+          Email
+        </label>
         <input
           type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+          id="email"
+          placeholder="Enter your email"
+          className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
-      </label>
+      </div>
 
-      <label>
-        Password
-        <div className="password-wrapper">
-          <input
-            type={showPassword ? "text" : "password"}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button
-            type="button"
-            className="toggle-password"
-            onClick={() => setShowPassword(!showPassword)}
-          >
-            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-          </button>
-        </div>
-      </label>
+      {/* Password */}
+      <div className="flex flex-col gap-1 relative">
+        <label htmlFor="password" className="text-sm font-medium text-gray-700">
+          Password
+        </label>
+        <input
+          type={showPassword ? "text" : "password"}
+          id="password"
+          placeholder="Enter your password"
+          className="p-2 border border-gray-300 rounded-lg pr-10 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          type="button"
+          onClick={() => setShowPassword(!showPassword)}
+          className="absolute right-3 top-9 text-gray-500 hover:text-gray-700"
+        >
+          {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+        </button>
+      </div>
 
-      <button type="submit" className="auth-btn">
-        Log in
+      {/* Forgot password link */}
+      <div className="flex justify-end">
+        <button
+          type="button"
+          className="text-sm text-indigo-600 hover:text-indigo-800 hover:underline"
+          onClick={() => alert('Forgot password flow here!')}
+        >
+          Forgot password?
+        </button>
+      </div>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        className="bg-indigo-600 text-white py-2 rounded-full font-semibold hover:bg-indigo-700 transition"
+      >
+        Log In
       </button>
-
-      <div className="divider">or</div>
-
-      <button type="button" className="google-btn">
-        <img src="https://www.svgrepo.com/show/355037/google.svg" alt="" />
-        Continue with Google
-      </button>
-
-      <p className="fine-print">
-        By logging in, you agree to our community guidelines and code of care.
-      </p>
     </form>
   );
 }

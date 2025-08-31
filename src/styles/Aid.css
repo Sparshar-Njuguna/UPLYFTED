@@ -1,0 +1,100 @@
+/* ------------------ Aid Section ------------------ */
+.aid-section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aid-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.aid-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2d2d2d;
+}
+
+.aid-subtitle {
+  font-size: 1rem;
+  color: rgba(45, 45, 45, 0.8);
+}
+
+/* ------------------ Grid Layout ------------------ */
+.aid-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .aid-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .aid-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------ Resource Card ------------------ */
+.resource-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.resource-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.resource-card-tag-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resource-card-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: #d1f5e0; /* soft mint */
+  color: #2d2d2d;
+}
+
+.resource-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.resource-card-description {
+  font-size: 0.9rem;
+  color: rgba(45, 45, 45, 0.8);
+  line-height: 1.4;
+}
+
+.resource-card-link {
+  margin-top: auto;
+  font-weight: 600;
+  color: #ff6b5a; /* empower coral vibe */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.resource-card-link:hover {
+  text-decoration: underline;
+  color: #e65b4a;
+}

@@ -13,7 +13,7 @@ import Community from "./pages/Community.jsx";
 import Auth from "./pages/Auth.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import WellnessDetail from "./pages/WellnessDetail.jsx"; /* NEW */                   
-
+import CommunityDetail from "./pages/CommunityDetail.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

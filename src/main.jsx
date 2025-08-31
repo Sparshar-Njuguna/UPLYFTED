@@ -12,7 +12,7 @@ import Wellness from "./pages/Wellness.jsx";
 import Community from "./pages/Community.jsx";
 import Auth from "./pages/Auth.jsx";
 import NotFound from "./pages/NotFound.jsx";
-import WellnessDetail from "./pages/WellnessDetail.jsx"; /* NEW */
+import WellnessDetail from "./pages/WellnessDetail.jsx"; /* NEW */                   
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -29,6 +29,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/community" element={<Community />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/wellness/:id" element={<WellnessDetail />} /> {/* NEW dynamic route */}
+
         </Route>
       </Routes>
     </BrowserRouter>

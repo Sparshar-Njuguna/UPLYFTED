@@ -1,2 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Emergency Micro-Grant",
+    "type": "Grant",
+    "description": "Small, rapid support for urgent needs (rent, food, medicine).",
+    "details": "Covers essential living expenses during sudden emergencies. Typical review within 24–48 hours.",
+    "eligibility": "Open to active learners facing unexpected hardship. A short explanation and basic proof of need are required.",
+    "steps": [
+      "Sign in and open the Emergency Micro-Grant form.",
+      "Describe the situation and the urgent expense.",
+      "Upload basic proof (receipt, invoice, or landlord note).",
+      "Submit. We review within 24–48 hours and notify you by email."
+    ],
+    "documents": [
+      "Valid ID",
+      "Proof of expense (invoice/receipt/notice)",
+      "Mobile wallet or bank details for disbursement"
+    ],
+    "resources": [
+      { "name": "Emergency Budget Template (PDF)", "url": "#" }
+    ],
+    "applyLink": "/auth",
+    "contactEmail": "support@uplyfted.org"
+  },
+  {
+    "id": 2,
+    "title": "Uplyfted Microloans",
+    "type": "Loan",
+    "description": "Zero-interest microloans for course tuition or equipment.",
+    "details": "Zero-interest, flexible repayment tailored to your training schedule. Intended for tuition, tools, or exam fees.",
+    "eligibility": "Active or admitted learners with a clear learning plan and repayment timeline.",
+    "steps": [
+      "Sign in and open the Microloan request.",
+      "Specify amount and exact purpose (tuition/equipment).",
+      "Provide a simple repayment plan.",
+      "Submit. We respond within 3–5 business days."
+    ],
+    "documents": [
+      "Valid ID",
+      "Cost estimate or invoice",
+      "Basic repayment plan"
+    ],
+    "resources": [
+      { "name": "Starter Repayment Planner (Sheet)", "url": "#" }
+    ],
+    "applyLink": "/auth",
+    "contactEmail": "support@uplyfted.org"
+  },
+  {
+    "id": 3,
+    "title": "Childcare Stipend",
+    "type": "Grant",
+    "description": "Short-term childcare support while you take training.",
+    "details": "Covers part of childcare costs during classes, exams, or interviews. Typically awarded for 2–8 weeks.",
+    "eligibility": "Parents/guardians enrolled in programs or attending verified training activities.",
+    "steps": [
+      "Sign in and complete the Childcare Stipend form.",
+      "Add your class/interview schedule.",
+      "Provide a childcare provider quote or estimate.",
+      "Submit. Decisions usually within 3–7 days."
+    ],
+    "documents": [
+      "Valid ID",
+      "Training schedule or proof of attendance",
+      "Childcare provider estimate"
+    ],
+    "resources": [
+      { "name": "Weekly Care Planner (Printable)", "url": "#" }
+    ],
+    "applyLink": "/auth",
+    "contactEmail": "support@uplyfted.org"
+  },
+  {
+    "id": 4,
+    "title": "Emergency Shelter Access",
+    "type": "Support",
+    "description": "Safe, temporary housing options for urgent displacement.",
+    "details": "We triage your situation and connect you to vetted local shelters and partners. Priority for immediate safety needs.",
+    "eligibility": "Anyone facing urgent housing insecurity or unsafe conditions.",
+    "steps": [
+      "If you’re in danger now, call the hotline.",
+      "Otherwise, sign in and complete a quick shelter request.",
+      "We match available options and coordinate an intake."
+    ],
+    "documents": [
+      "Valid ID (if available)",
+      "Any relevant notices (optional)"
+    ],
+    "resources": [
+      { "name": "Personal Safety Checklist", "url": "#" }
+    ],
+    "applyLink": "tel:+1234567890",
+    "contactEmail": "support@uplyfted.org"
+  }
+]
 
 

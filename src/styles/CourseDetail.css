@@ -1,70 +1,77 @@
-/* src/styles/CourseDetail.css */
-.course-detail {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,245,255,0.85));
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(50, 20, 80, 0.06);
-  color: #1f1f2e;
+.course-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 80vh;
+  background: linear-gradient(to bottom, #fdf2f8, #f5f3ff);
 }
 
-.course-hero {
-  text-align: left;
-  margin-bottom: 1.5rem;
+.course-detail-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .course-title {
   font-size: 2rem;
-  margin-bottom: 0.25rem;
-  color: #2b1b66;
-}
-
-.course-sub {
-  color: #4b4b5b;
-  margin-bottom: 0.75rem;
-}
-
-.course-meta .chip {
-  display: inline-block;
-  background: rgba(91,33,182,0.08);
+  font-weight: bold;
   color: #5b21b6;
-  border-radius: 999px;
-  padding: 0.25rem 0.6rem;
-  margin-right: 0.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
-.course-body { margin-top: 1rem; }
-
-.course-section { margin-bottom: 1.25rem; }
-
-.modules-list {
-  padding-left: 1.1rem;
-  color: #333;
+.course-description {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
-.resources-list a { color: #5b21b6; text-decoration: none; }
+.course-duration,
+.course-level,
+.course-price {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
 
-.course-cta-row {
+.buttons {
+  margin-top: 2rem;
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  align-items: center;
-  margin-top: 1.5rem;
+}
+
+.back-btn {
+  padding: 0.6rem 1.2rem;
+  background: #f3e8ff;
+  color: #6b21a8;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #e9d5ff;
+  color: #5b21b6;
 }
 
 .enroll-btn {
-  background: linear-gradient(90deg, #7c3aed, #a855f7);
-  color: #fff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
+  padding: 0.6rem 1.5rem;
+  background: #ec4899;
+  color: white;
   font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 6px 18px rgba(124,58,237,0.18);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.back-link {
-  color: #6b7280;
-  text-decoration: none;
+.enroll-btn:hover {
+  background: #db2777;
 }

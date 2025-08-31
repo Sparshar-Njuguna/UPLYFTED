@@ -1,45 +1,121 @@
 
 [
   {
+    "id": 1,
     "title": "Digital Marketing",
     "description": "Master SEO, social media, and online campaigns to grow any business in the digital age.",
+    "overview": "A practical course that covers core digital marketing channels: SEO, content, social ads, email marketing and analytics. Great for freelancing or growing your brand.",
     "level": "Intermediate",
     "category": "Marketing",
-    "link": "/courses/digital-marketing"
+    "duration": "6 weeks",
+    "modules": [
+      "Intro to digital marketing & strategy",
+      "SEO fundamentals",
+      "Content & social strategy",
+      "Paid ads basics (Facebook/Google)",
+      "Analytics & optimization"
+    ],
+    "outcomes": "By the end you’ll be able to plan and run simple campaigns, measure results, and iterate for growth.",
+    "resources": [
+      { "name": "Google Analytics", "url": "https://analytics.google.com" },
+      { "name": "Moz Beginner's Guide", "url": "https://moz.com/beginners-guide-to-seo" }
+    ],
+    "enrollLink": "/auth"
   },
   {
+    "id": 2,
     "title": "Freelance Fundamentals",
     "description": "Learn how to start, manage, and scale your freelancing career with confidence.",
+    "overview": "Practical steps for launching as a freelancer: finding clients, pricing, contracts, workflows and reputation management.",
     "level": "Beginner",
     "category": "Business",
-    "link": "/courses/freelance-fundamentals"
+    "duration": "4 weeks",
+    "modules": [
+      "Choosing a niche & services",
+      "Building a portfolio",
+      "Pricing & contracts",
+      "Finding clients & pitching",
+      "Client workflows & retention"
+    ],
+    "outcomes": "Get your first paying clients and build reliable freelance income.",
+    "resources": [
+      { "name": "Upwork Guides", "url": "https://www.upwork.com/resources" }
+    ],
+    "enrollLink": "/auth"
   },
   {
+    "id": 3,
     "title": "Frontend Fundamentals",
     "description": "Build strong foundations in HTML, CSS, and JavaScript to kickstart your web dev journey.",
+    "overview": "A hands-on foundation course covering modern HTML, CSS layout, responsive design, and vanilla JavaScript fundamentals with small projects.",
     "level": "Beginner",
     "category": "Web Development",
-    "link": "/courses/frontend-fundamentals"
+    "duration": "8 weeks",
+    "modules": [
+      "HTML & semantic markup",
+      "CSS fundamentals & layouts",
+      "Responsive design",
+      "JavaScript basics & DOM",
+      "Mini project: portfolio site"
+    ],
+    "outcomes": "You'll build a portfolio-ready site and understand the core web stack.",
+    "resources": [
+      { "name": "MDN Web Docs", "url": "https://developer.mozilla.org" }
+    ],
+    "enrollLink": "/auth"
   },
   {
+    "id": 4,
     "title": "Virtual Assistant Training",
     "description": "Develop essential skills to become a successful VA and support clients globally.",
+    "overview": "Skills, tools, and business practices for remote administrative support, social media assistance, calendar management, and client communication.",
     "level": "Beginner",
     "category": "Business",
-    "link": "/courses/virtual-assistant"
+    "duration": "4 weeks",
+    "modules": [
+      "Tools & workflows (Calendly, Google Workspace)",
+      "Client communication",
+      "Social media & content support basics",
+      "Time management & productivity"
+    ],
+    "outcomes": "Start offering VA services with a clear package and process.",
+    "resources": [],
+    "enrollLink": "/auth"
   },
   {
+    "id": 5,
     "title": "Project Management Foundations",
     "description": "Learn the principles and tools to plan, organize, and manage projects effectively.",
+    "overview": "An introduction to project lifecycles, scope, scheduling, risk management and common PM tools (Trello/Asana).",
     "level": "Intermediate",
     "category": "Management",
-    "link": "/courses/project-management"
+    "duration": "6 weeks",
+    "modules": [
+      "Project initiation & scope",
+      "Scheduling & milestones",
+      "Risk & stakeholder management",
+      "Tools & reporting"
+    ],
+    "outcomes": "Run small-to-medium projects with confidence and clarity.",
+    "resources": [],
+    "enrollLink": "/auth"
   },
   {
+    "id": 6,
     "title": "Personal Finance 101",
-    "description": "Understand budgeting, saving, and investing to secure your financial future.",
+    "description": "Understand budgeting, saving, and investing to build long-term financial security.",
+    "overview": "Foundational personal finance knowledge: budgeting, emergency funds, debt strategies, basics of investing and simple planning.",
     "level": "Beginner",
     "category": "Finance",
-    "link": "/courses/personal-finance"
+    "duration": "3 weeks",
+    "modules": [
+      "Budgeting & cashflow",
+      "Emergency funds & insurance basics",
+      "Debt strategy",
+      "Intro to investing"
+    ],
+    "outcomes": "Practical financial habits to improve long-term stability.",
+    "resources": [],
+    "enrollLink": "/auth"
   }
 ]

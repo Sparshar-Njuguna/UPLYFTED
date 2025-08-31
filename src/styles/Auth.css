@@ -6,7 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #5c4aac, #784ea5, #5a458b);
+  background: linear-gradient(to bottom,
+    #5b21b6,   /* deep violet */
+    #a78bfa,   /* lavender */
+    #7c3aed,   /* vibrant mid */
+    #e9d5ff   /* pastel lilac */);
   font-family: "Poppins", sans-serif;
   padding: 2rem;
   position: relative;

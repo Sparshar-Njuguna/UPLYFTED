@@ -1,3 +1,14 @@
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #5b21b6,   /* deep violet */
+    #a78bfa,   /* lavender */
+    #7c3aed,   /* vibrant mid */
+    #e9d5ff    /* pastel lilac */
+  );
+}
+
 .wellness-section {
   padding: 2rem 1rem;
   max-width: 1100px;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./Auth.css";
+import "../styles/Auth.css";
 
 export default function Auth() {
   const [isLogin, setIsLogin] = useState(true);

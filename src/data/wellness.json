@@ -1,1 +1,35 @@
 
+[
+  {
+    "id": 1,
+    "title": "Low-Cost Counseling Directory",
+    "tag": "Therapy",
+    "description": "Find vetted, affordable therapists by region.",
+    "details": "A national directory of licensed therapists who offer affordable or sliding-scale rates. You can filter by region, specialty, and availability.",
+    "resources": [
+      { "name": "Open Path Collective", "url": "https://openpathcollective.org" },
+      { "name": "TherapyDen", "url": "https://www.therapyden.com" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Crisis & Safety Planning",
+    "tag": "Safety",
+    "description": "Confidential steps to build a safety plan and get help fast.",
+    "details": "A step-by-step guide to creating a personalized safety plan for moments of crisis. Includes hotlines, emergency contacts, and grounding exercises.",
+    "resources": [
+      { "name": "988 Suicide & Crisis Lifeline", "url": "https://988lifeline.org" },
+      { "name": "RAINN", "url": "https://www.rainn.org" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Daily Journal Prompt",
+    "tag": "Self-care",
+    "description": "Simple guided prompts to reflect and reset.",
+    "details": "A rotating set of gentle journal prompts designed to encourage reflection, self-awareness, and emotional clarity.",
+    "resources": [
+      { "name": "Journal Prompt Generator", "url": "https://journalbuddies.com/journal-prompts" }
+    ]
+  }
+]

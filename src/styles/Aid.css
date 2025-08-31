@@ -128,7 +128,7 @@
 .resource-card-link {
   margin-top: auto;
   font-weight: 600;
-  color: #ff6b5a; /* empower coral vibe */
+  color: #ff6b5a;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
@@ -171,4 +171,3 @@
 .aid-cta-button:hover {
   background: #4a1d99;
 }
-

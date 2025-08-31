@@ -12,6 +12,8 @@ import Wellness from "./pages/Wellness.jsx";
 import Community from "./pages/Community.jsx";
 import Auth from "./pages/Auth.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import WellnessDetail from "./pages/WellnessDetail.jsx"; /* NEW */
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

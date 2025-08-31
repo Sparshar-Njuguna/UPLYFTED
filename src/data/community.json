@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Peer Support Circles",
+    "description": "Weekly virtual groups moderated by trained volunteers.",
+    "tag": "Support",
+    "details": "Our peer support circles meet every week online, guided by trained volunteers who foster safe and inclusive discussions. Participants share experiences and encourage one another through challenges."
+  },
+  {
+    "id": 2,
+    "title": "Mentorship Matches",
+    "description": "Career mentors by field and region (coming soon).",
+    "tag": "Mentorship",
+    "details": "We’re building a mentorship network where you’ll be paired with someone in your field of study or career path, offering guidance, encouragement, and real-world advice."
+  },
+  {
+    "id": 3,
+    "title": "Local Resource Map",
+    "description": "Find nearby shelters, clinics, and training hubs.",
+    "tag": "Resources",
+    "details": "Our interactive map highlights shelters, wellness clinics, and training centers in your area. It’s constantly updated to make sure you have access to safe and trusted resources."
+  }
+]

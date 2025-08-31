@@ -1,0 +1,77 @@
+.wellness-detail {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #2d2d2d;
+}
+
+.wellness-hero {
+  margin-bottom: 1.5rem;
+}
+
+.wellness-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #efe9ff; /* same lavender chip */
+  color: #2d2d2d;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.hero-card {
+  background: #f3e8ff; /* lavender card background */
+  border-radius: 1rem; /* rounded like AidDetail */
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.hero-card h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #3b0764; /* deep purple for headers */
+}
+
+.hero-card p {
+  line-height: 1.6;
+}
+
+.hero-card ul {
+  padding-left: 1.25rem;
+}
+
+.hero-card li {
+  margin-bottom: 0.5rem;
+}
+
+.hero-card a {
+  color: #5b21b6; /* purple links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-card a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #5b21b6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+

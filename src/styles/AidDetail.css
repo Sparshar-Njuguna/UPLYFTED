@@ -20,11 +20,7 @@
   margin-bottom: 0.5rem;
 }
 
-.aid-sub {
-  font-size: 1rem;
-  color: rgba(45,45,45,0.85);
-  margin-bottom: 0.75rem;
-}
+/* removed .aid-sub entirely (no more duplicate) */
 
 .aid-meta {
   display: flex;
@@ -49,6 +45,14 @@
 
 .aid-section {
   margin: 1.25rem 0;
+}
+
+/* Hero card style applied */
+.hero-card {
+  background: #f3e8ff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .aid-section h3 {
@@ -107,3 +111,4 @@
   font-size: 0.95rem;
   color: rgba(45,45,45,0.85);
 }
+

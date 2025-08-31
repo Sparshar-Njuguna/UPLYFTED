@@ -30,7 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/auth" element={<Auth />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/wellness/:id" element={<WellnessDetail />} /> {/* NEW dynamic route */}
-
+          <Route path="/community/:id" element={<CommunityDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

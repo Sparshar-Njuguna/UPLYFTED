@@ -1,17 +1,17 @@
 // src/pages/AidDetail.jsx
 import { Link, useParams } from "react-router-dom";
-import aidData from "../data/aid.json";
+import aids from "../data/aid.json";
 import "../styles/AidDetail.css";
 
 export default function AidDetail() {
   const { id } = useParams();
-  const aid = aidData.find((a) => a.id.toString() === id);
+  const aid = aids.find((a) => a.id.toString() === id);
 
   if (!aid) {
     return (
       <div className="aid-detail not-found">
         <h2>Resource not found</h2>
-        <p>We couldn’t find that aid resource. Try returning to the aid list.</p>
+        <p>We couldn’t locate that aid program. Try returning to the list.</p>
         <Link to="/aid" className="back-link">← Back to Aid</Link>
       </div>
     );
@@ -19,61 +19,82 @@ export default function AidDetail() {
 
   return (
     <div className="aid-detail">
-      {/* Hero Section */}
       <header className="aid-hero">
         <h1 className="aid-title">{aid.title}</h1>
+        {/* Removed the duplicate "aid-sub" so overview only shows once */}
         <div className="aid-meta">
-          <span className="chip">{aid.type}</span>
+          {aid.type && <span className="chip">{aid.type}</span>}
         </div>
       </header>
 
-      {/* Content Sections */}
       <main className="aid-body">
-        {aid.overview && (
-          <section className="aid-section-card">
+        {aid.details || aid.description ? (
+          <section className="aid-section hero-card">
             <h3>Overview</h3>
-            <p>{aid.overview}</p>
+            <p>{aid.details || aid.description}</p>
           </section>
-        )}
+        ) : null}
 
         {aid.eligibility && (
-          <section className="aid-section-card">
+          <section className="aid-section hero-card">
             <h3>Eligibility</h3>
             <p>{aid.eligibility}</p>
           </section>
         )}
 
-        {aid.application && (
-          <section className="aid-section-card">
-            <h3>How to Apply</h3>
-            <p>{aid.application}</p>
+        {Array.isArray(aid.steps) && aid.steps.length > 0 && (
+          <section className="aid-section hero-card">
+            <h3>How to apply</h3>
+            <ol className="steps-list">
+              {aid.steps.map((s, i) => <li key={i}>{s}</li>)}
+            </ol>
           </section>
         )}
 
-        {aid.resources && aid.resources.length > 0 && (
-          <section className="aid-section-card">
+        {Array.isArray(aid.documents) && aid.documents.length > 0 && (
+          <section className="aid-section hero-card">
+            <h3>Documents</h3>
+            <ul className="docs-list">
+              {aid.documents.map((d, i) => <li key={i}>{d}</li>)}
+            </ul>
+          </section>
+        )}
+
+        {Array.isArray(aid.resources) && aid.resources.length > 0 && (
+          <section className="aid-section hero-card">
             <h3>Resources</h3>
-            <ul>
-              {aid.resources.map((r, idx) => (
-                <li key={idx}>
-                  <a href={r.url} target="_blank" rel="noopener noreferrer">
-                    {r.name}
-                  </a>
+            <ul className="resources-list">
+              {aid.resources.map((r, i) => (
+                <li key={i}>
+                  <a href={r.url} target="_blank" rel="noopener noreferrer">{r.name}</a>
                 </li>
               ))}
             </ul>
           </section>
         )}
 
-        {/* CTA */}
         <div className="aid-cta-row">
-          <a className="aid-cta-btn" href={aid.link || "/auth"} target="_blank" rel="noopener noreferrer">
-            Apply / Learn More →
-          </a>
+          {aid.applyLink && (
+            <a
+              className="apply-btn"
+              href={aid.applyLink}
+              target={aid.applyLink.startsWith("http") ? "_blank" : undefined}
+              rel={aid.applyLink.startsWith("http") ? "noopener noreferrer" : undefined}
+            >
+              Apply / Get Help →
+            </a>
+          )}
           <Link to="/aid" className="back-link">← Back to Aid</Link>
         </div>
+
+        {aid.contactEmail && (
+          <p className="aid-contact">
+            Need a human? <a href={`mailto:${aid.contactEmail}`}>{aid.contactEmail}</a>
+          </p>
+        )}
       </main>
     </div>
   );
 }
+
 

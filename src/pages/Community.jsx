@@ -1,27 +1,60 @@
 
-export default function Community() {
-  return (
-    <section className="prose max-w-none">
-      <h2 className="font-[Poppins] text-3xl font-bold">Community Center</h2>
-      <p className="text-steadyCharcoal/80">
-        A safe space for connection. The forum is coming soon — for now, browse curated groups,
-        mentorship circles, and local meetups (placeholder).
-      </p>
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import communityData from "../data/community.json";
+import storiesData from "../data/stories.json";
+import "./Community.css";
 
-      <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <article className="rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-black/5">
-          <h3 className="font-semibold">Peer Support Circles</h3>
-          <p className="text-sm text-steadyCharcoal/80">Weekly virtual groups moderated by trained volunteers.</p>
-        </article>
-        <article className="rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-black/5">
-          <h3 className="font-semibold">Mentorship Matches</h3>
-          <p className="text-sm text-steadyCharcoal/80">Career mentors by field and region (coming soon).</p>
-        </article>
-        <article className="rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-black/5">
-          <h3 className="font-semibold">Local Resource Map</h3>
-          <p className="text-sm text-steadyCharcoal/80">Find nearby shelters, clinics, and training hubs.</p>
-        </article>
+export default function Community() {
+  const [features, setFeatures] = useState([]);
+  const [stories, setStories] = useState([]);
+
+  useEffect(() => {
+    setFeatures(communityData);
+    setStories(storiesData);
+  }, []);
+
+  return (
+    <section className="community-section">
+      {/* Hero */}
+      <div className="community-hero">
+        <h2>Community Center</h2>
+        <p>
+          A safe space for connection. The forum is coming soon — for now, explore
+          groups, mentorship circles, and uplifting stories.
+        </p>
       </div>
+
+      {/* Features Grid */}
+      <div className="community-grid">
+        {features.map((item) => (
+          <article key={item.id} className="community-card">
+            <span className="tag">{item.tag}</span>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <Link to={`/community/${item.id}`} className="learn-more">
+              Learn more →
+            </Link>
+          </article>
+        ))}
+      </div>
+
+      {/* Stories Section */}
+      <div className="stories-section">
+        <h3>Encouraging Stories</h3>
+        <div className="stories-grid">
+          {stories.map((story) => (
+            <blockquote key={story.id} className="story-card">
+              <p>“{story.story}”</p>
+              <footer>— {story.author}</footer>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+
+      {/* Tagline */}
+      <p className="community-tagline">Together we rise 💜</p>
     </section>
   );
 }
+

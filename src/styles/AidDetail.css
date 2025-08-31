@@ -1,0 +1,109 @@
+.aid-detail {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #2d2d2d;
+}
+
+.aid-detail.not-found {
+  text-align: center;
+}
+
+.aid-hero {
+  margin-bottom: 1.5rem;
+}
+
+.aid-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.aid-sub {
+  font-size: 1rem;
+  color: rgba(45,45,45,0.85);
+  margin-bottom: 0.75rem;
+}
+
+.aid-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #efe9ff; /* soft violet */
+  color: #2d2d2d;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.aid-body {
+  display: block;
+}
+
+.aid-section {
+  margin: 1.25rem 0;
+}
+
+.aid-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.steps-list {
+  margin: 0.5rem 1rem;
+  padding-left: 1rem;
+}
+
+.docs-list,
+.resources-list {
+  margin: 0.5rem 1rem;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.aid-cta-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.apply-btn {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  background: #ff6b5a;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.apply-btn:hover {
+  background: #e65b4a;
+}
+
+.back-link {
+  color: #5b21b6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.aid-contact {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: rgba(45,45,45,0.85);
+}

@@ -1,64 +1,67 @@
-import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import coursesData from "../data/courses.json";
+// src/pages/CourseDetail.jsx
+import { Link, useParams } from "react-router-dom";
+import courses from "../data/courses.json";
 import "../styles/CourseDetail.css";
 
-const CourseDetail = () => {
+export default function CourseDetail() {
   const { id } = useParams();
-  const course = coursesData.find((c) => c.id.toString() === id);
+  const course = courses.find((c) => c.id.toString() === id);
 
   if (!course) {
     return (
-      <motion.div
-        className="course-detail not-found"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
+      <div className="course-detail not-found">
         <h2>Course not found</h2>
-        <Link to="/career" className="back-btn">
-          ← Back to Courses
-        </Link>
-      </motion.div>
+        <p>We couldn't locate that course. Try returning to the course list.</p>
+        <Link to="/career" className="back-link">← Back to courses</Link>
+      </div>
     );
   }
 
   return (
-    <motion.div
-      className="course-detail"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
-      <motion.div
-        className="course-card"
-        initial={{ scale: 0.95 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
-      >
+    <div className="course-detail">
+      <header className="course-hero">
         <h1 className="course-title">{course.title}</h1>
-        <p className="course-description">{course.description}</p>
-
+        <p className="course-sub">{course.overview || course.description}</p>
         <div className="course-meta">
-          <span className="level">📘 {course.level}</span>
-          <span className="duration">⏳ {course.duration}</span>
+          <span className="chip">{course.level}</span>
+          <span className="chip">{course.category}</span>
+          {course.duration && <span className="chip">{course.duration}</span>}
         </div>
+      </header>
 
-        <div className="course-actions">
-          <Link to="/career" className="back-btn">
-            ← Back to Courses
-          </Link>
-          <a
-            href={course.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="enroll-btn"
-          >
-            Enroll Now
+      <main className="course-body">
+        <section className="course-section">
+          <h3>What you'll learn</h3>
+          <p>{course.outcomes}</p>
+        </section>
+
+        <section className="course-section">
+          <h3>Modules</h3>
+          <ol className="modules-list">
+            {course.modules && course.modules.map((m, i) => <li key={i}>{m}</li>)}
+          </ol>
+        </section>
+
+        {course.resources && course.resources.length > 0 && (
+          <section className="course-section">
+            <h3>Resources</h3>
+            <ul className="resources-list">
+              {course.resources.map((r, idx) => (
+                <li key={idx}>
+                  <a href={r.url} target="_blank" rel="noopener noreferrer">{r.name}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div className="course-cta-row">
+          <a className="enroll-btn" href={course.enrollLink || "/auth"}>
+            Enroll / Start →
           </a>
+          <Link to="/career" className="back-link">← Back to courses</Link>
         </div>
-      </motion.div>
-    </motion.div>
+      </main>
+    </div>
   );
-};
-
-export default CourseDetail;
+}

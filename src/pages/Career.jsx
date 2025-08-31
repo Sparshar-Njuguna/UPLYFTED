@@ -1,10 +1,11 @@
+// src/pages/Career.jsx
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import courses from "../data/courses.json";
 import "../styles/Career.css";
 
 export default function Career() {
-  // Scroll to top when the page loads
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -46,13 +47,13 @@ export default function Career() {
         </motion.h2>
 
         <div className="cards-container">
-          {courses.map((course, index) => (
+          {courses.map((course) => (
             <motion.div
-              key={index}
+              key={course.id}
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.6, delay: course.id * 0.08 }}
               className="card"
             >
               <h3 className="card-title">{course.title}</h3>
@@ -60,14 +61,11 @@ export default function Career() {
               <p className="card-meta">
                 <span>{course.level}</span> · <span>{course.category}</span>
               </p>
-              <a
-                href={course.link}
-                className="card-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+
+              {/* INTERNAL ROUTE to course detail page */}
+              <Link to={`/course/${course.id}`} className="card-link">
                 Learn More →
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

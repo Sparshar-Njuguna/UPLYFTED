@@ -4,7 +4,7 @@ import communityData from "../data/community.json";
 import storiesData from "../data/stories.json";
 import "../styles/Community.css";
 
-// Import testimonial images (place these in src/assets)
+// Import testimonial images (still safe in src/assets)
 import mayaImg from "../assets/maya.jpeg";
 import jordanImg from "../assets/jordan.jpeg";
 import aaliyahImg from "../assets/aaliyah.jpeg";
@@ -17,6 +17,14 @@ export default function Community() {
     setFeatures(communityData);
     setStories(storiesData);
   }, []);
+
+  // helper: decide which image goes with which story
+  const getImageForAuthor = (author) => {
+    if (author.startsWith("Maya")) return mayaImg;
+    if (author.startsWith("Jordan")) return jordanImg;
+    if (author.startsWith("Aaliyah")) return aaliyahImg;
+    return null;
+  };
 
   return (
     <section className="community-section">
@@ -48,10 +56,7 @@ export default function Community() {
         <h3>Encouraging Stories</h3>
         <div className="stories-grid">
           {stories.map((story) => {
-            let imageSrc;
-            if (story.author === "Maya") imageSrc = mayaImg;
-            if (story.author === "Jordan") imageSrc = jordanImg;
-            if (story.author === "Aaliyah") imageSrc = aaliyahImg;
+            const imageSrc = getImageForAuthor(story.author);
 
             return (
               <blockquote key={story.id} className="story-card">
@@ -71,5 +76,6 @@ export default function Community() {
     </section>
   );
 }
+
 
 

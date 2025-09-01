@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import communityData from "../data/community.json";
 import storiesData from "../data/stories.json";
-import "./Community.css";
+import "../styles/Community.css";
 
 export default function Community() {
   const [features, setFeatures] = useState([]);

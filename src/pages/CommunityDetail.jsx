@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import communityData from "../data/community.json";
-import "./CommunityDetail.css";
+import "../styles/CommunityDetail.css";
 
 export default function CommunityDetail() {
   const { id } = useParams();

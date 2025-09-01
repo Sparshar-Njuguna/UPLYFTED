@@ -83,3 +83,19 @@
   color: #5b21b6;
   text-align: right;
 }
+
+.learn-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  color: #FE828C;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.learn-more:hover {
+  color: #7c3aed;
+  transform: translateX(2px);
+}
+

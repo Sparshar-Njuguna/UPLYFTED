@@ -1,27 +1,2 @@
-[
-  {
-    "id": 1,
-    "name": "Maya Patel",
-    "story": "Joining this community has been life-changing. The support and resources helped me land my first tech role!",
-    "image": "maya.jpeg"
-  },
-  {
-    "id": 2,
-    "name": "Li Wei",
-    "story": "I found amazing mentors here who guided me through my career transition.",
-    "image": "li.jpeg"
-  },
-  {
-    "id": 3,
-    "name": "Aisha Khan",
-    "story": "The connections I've made are priceless. I’ve never felt more supported.",
-    "image": "aisha.jpeg"
-  },
-  {
-    "id": 4,
-    "name": "Sofia Rodriguez",
-    "story": "From workshops to networking, this community opened so many doors for me.",
-    "image": "sofia.jpeg"
-  }
-]
+
 

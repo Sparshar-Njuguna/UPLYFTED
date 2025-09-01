@@ -85,14 +85,6 @@
   text-align: right;
 }
 
-.story-card {
-  background: linear-gradient(180deg, #faf5ff, #f3e8ff, #e9d5ff);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  font-style: italic;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: center;
-}
 
 .story-img {
   width: 60px;

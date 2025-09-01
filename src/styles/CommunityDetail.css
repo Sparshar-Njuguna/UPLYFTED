@@ -9,7 +9,7 @@
   font-size: 2.25rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  background: rgba(45, 45, 45, 0.75);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

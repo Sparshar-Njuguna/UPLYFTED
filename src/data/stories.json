@@ -1,2 +1,22 @@
+[
+  {
+    "id": 1,
+    "author": "Maya, 22",
+    "story": "I joined a peer support circle during a tough semester and it made me feel less alone.",
+    "image": "maya.jpeg"
+  },
+  {
+    "id": 2,
+    "author": "Jordan, 19",
+    "story": "Through the mentorship program, I connected with a career coach who believed in me.",
+    "image": "jordan.jpeg"
+  },
+  {
+    "id": 3,
+    "author": "Aaliyah, 24",
+    "story": "The local resource map helped me find a safe space when I needed it most.",
+    "image": "aaliyah.jpeg"
+  }
+]
 
 

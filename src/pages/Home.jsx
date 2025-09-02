@@ -162,7 +162,7 @@ export default function Home() {
                   startOffset="50%"
                   textAnchor="middle"
                 >
-                  YOU DESERVE IT QUEEN
+                  YOU DESERVE IT 💞
                 </textPath>
               </text>
             </svg>

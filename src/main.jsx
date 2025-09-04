@@ -37,3 +37,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 );
 
+export const backend = "https://uplyfted-backend-2.onrender.com";

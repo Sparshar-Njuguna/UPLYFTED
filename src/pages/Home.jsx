@@ -5,6 +5,7 @@ import { GraduationCap, HandCoins, HeartPulse, Users } from "lucide-react";
 import "../styles/Home.css";
 import HeroImage from "../assets/Hero-image.jpeg";
 import HeartAnimation from "../components/HeartAnimation.jsx";
+import { backend } from "../main";
 
 const featuredCards = [
   {

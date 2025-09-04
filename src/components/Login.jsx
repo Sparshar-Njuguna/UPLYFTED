@@ -1,16 +1,20 @@
 import { useState } from "react";
-import { backend } from "../main";
+import { Eye, EyeOff } from "lucide-react";
+import { backend } from "../main"; // import backend URL
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(null);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setMessage(null);
+    setError("");
+    setSuccess("");
 
     try {
       const res = await fetch(`${backend}/auth/login`, {
@@ -21,38 +25,69 @@ export default function Login() {
 
       const data = await res.json();
 
-      if (!res.ok) throw new Error(data.message || "Invalid credentials");
+      if (!res.ok) throw new Error(data.message || "Invalid email or password");
 
-      setMessage("✅ Login successful!");
-      // store token in localStorage for later
+      setSuccess("🎉 Logged in successfully! Welcome back.");
+      setEmail("");
+      setPassword("");
+
+      // 🔑 save token for future API calls
       localStorage.setItem("token", data.token);
     } catch (err) {
-      setMessage(`❌ ${err.message}`);
+      setError(err.message);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit" disabled={loading}>
-        {loading ? "Logging in..." : "Log In"}
+    <form className="auth-form" onSubmit={handleLogin}>
+      <label>
+        Email
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </label>
+
+      <label>
+        Password
+        <div className="password-wrapper">
+          <input
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button
+            type="button"
+            className="toggle-password"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+          </button>
+        </div>
+      </label>
+
+      <button type="submit" className="auth-btn" disabled={loading}>
+        {loading ? "Logging in…" : "Log in"}
       </button>
-      {message && <p>{message}</p>}
+
+      {error && <p className="error-text">❌ {error}</p>}
+      {success && <p className="success-text">{success}</p>}
+
+      <div className="divider">or</div>
+
+      <button type="button" className="google-btn">
+        <img src="https://www.svgrepo.com/show/355037/google.svg" alt="" />
+        Continue with Google
+      </button>
+
+      <p className="fine-print">
+        By logging in, you agree to our community guidelines and code of care.
+      </p>
     </form>
   );
 }

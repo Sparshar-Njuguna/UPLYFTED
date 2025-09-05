@@ -24,7 +24,8 @@ export default function Register({ role }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: `${firstName} ${lastName}`, // combine into username
+          firstName,
+          lastName,
           email,
           password,
           role: selectedRole,
@@ -34,6 +35,12 @@ export default function Register({ role }) {
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.message || "Something went wrong");
+
+      // ✅ Save token + user info after register
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+      }
 
       setSuccess("🎉 Account created successfully! You can now log in.");
       setFirstName("");
@@ -145,3 +152,4 @@ export default function Register({ role }) {
     </form>
   );
 }
+

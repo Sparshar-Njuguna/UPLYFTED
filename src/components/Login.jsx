@@ -27,12 +27,13 @@ export default function Login() {
 
       if (!res.ok) throw new Error(data.message || "Invalid email or password");
 
-      setSuccess("🎉 Logged in successfully! Welcome back.");
+      // ✅ Save token + user info
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      setSuccess(`🎉 Welcome back, ${data.user.username || data.user.email}!`);
       setEmail("");
       setPassword("");
-
-      // 🔑 save token for future API calls
-      localStorage.setItem("token", data.token);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -91,5 +92,6 @@ export default function Login() {
     </form>
   );
 }
+
 
 
